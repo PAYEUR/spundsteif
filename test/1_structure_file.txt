@@ -1,0 +1,38 @@
+0	NAME
+1	
+2	Date
+3	Time
+4	num_channels
+5	XXX
+6	num_messung
+7	
+8	Name Channel
+9	Units
+10	Date - Hour
+11	
+12	T0
+13	Time Intervals
+14	Num Channel
+15	XXX
+16	XXX
+17	XXX
+18	XXX
+19	XXX
+20	Units (Elektr.)
+21	Units (Physik.)
+22	XXX
+23	XXX
+24	XXX
+25	
+26	XXX
+27	Null
+28	
+29	XXX
+30	k Faktor
+31	XXX
+32	XXX
+33	XXX
+34	Type Sensor
+35	ID Sensor
+36	
+37	YYY
