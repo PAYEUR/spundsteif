@@ -1,6 +1,7 @@
 {
   "spundsteif": {
     "Overview": "/",
-    "Library data sensor": "sensors.html"
+    "Library data sensor": "sensors.html",
+    "Library inclinometers": "inclinometers.html"
   }
 }

@@ -22,9 +22,17 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "df_to_m": "01_sensors.ipynb",
          "define_index": "01_sensors.ipynb",
          "creation_df_hand": "01_sensors.ipynb",
-         "run_computation": "01_sensors.ipynb"}
+         "run_computation": "01_sensors.ipynb",
+         "construct_df_csv": "02_inclinometers.ipynb",
+         "drop_columns": "02_inclinometers.ipynb",
+         "update_type_date": "02_inclinometers.ipynb",
+         "rename_columns": "02_inclinometers.ipynb",
+         "add_column_up": "02_inclinometers.ipynb",
+         "df_multiindex": "02_inclinometers.ipynb",
+         "run_computation_inklino": "02_inclinometers.ipynb"}
 
-modules = ["sensors.py"]
+modules = ["sensors.py",
+           "inclinometers.py"]
 
 doc_url = "https://PAYEUR.github.io/spundsteif/"
 

@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Library data sensor
       url: sensors.html
+    - output: web,pdf
+      title: Library inclinometers
+      url: inclinometers.html
     output: web
     title: spundsteif
   output: web
