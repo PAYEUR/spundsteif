@@ -65,6 +65,10 @@ df = run_computation(list_files_names=AUTOMATIC_FILES,
 
 ```
 
+```
+df
+```
+
 
 
 
@@ -644,7 +648,3 @@ df = run_computation(list_files_names=AUTOMATIC_FILES,
 </div>
 
 
-
-```
-df
-```
