@@ -17,7 +17,7 @@
 
 ## Installing
 
-> git clone https://github.com/PAYEUR/spundsteif  > pip install -e spundsteif
+> git clone https://github.com/PAYEUR/spundsteif    > pip install -e spundsteif
 
 *Note that `spundsteif` must be installed into the same python environment that you use for both your Jupyter Server and your workspace.*
 
@@ -25,7 +25,7 @@
 
 ### Dashboard usage
 
-Open the notbook `core.ipyb` and follow the instructions to analyse your data and get the values of the mechanical parameters.
+Open the notbook `core.ipyb` and follow the instructions to analyse your data and get the values of the mechanical parameters.  
 
 ###Library usage
 
@@ -63,7 +63,6 @@ df = run_computation(list_files_names=AUTOMATIC_FILES,
                      structure_data=STRUCTURE_FILE, 
                      file_name_df_hand=HAND_FILE)
 
-df
 ```
 
 
@@ -645,3 +644,7 @@ df
 </div>
 
 
+
+```
+df
+```
