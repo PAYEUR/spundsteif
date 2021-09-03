@@ -34,14 +34,14 @@ def __construct_INFO__(name_file):
   f_struc = open(name_file, "r")
   reader = csv.reader(f_struc, delimiter = '\t')
 
-  INFO = []       #Liste des info contenues dans le fichier permettera d'accéder aux données dans le ficher brut
+  info = []       #Liste des info contenues dans le fichier permettera d'accéder aux données dans le ficher brut
   for row in reader:
     if len(row) >= 2:
-      INFO.append(row[1])
+      info.append(row[1])
     else:
-      INFO.append("XXX")
+      info.append("XXX")
 
-  return INFO
+  return info
 
 # Cell
 def __construct_list_DATA__(name_file):
@@ -60,7 +60,7 @@ def __construct_list_DATA__(name_file):
 
 # Cell
 def read_files(list_files_names,
-               structure_data=STRUCTURE_DATA):
+               structure_data):
   """
   Retourne le tuple des listes issues de la lecture des fichiers :
   - list_data : liste des listes images des fichiers de mesure 'messung_XX'
@@ -78,11 +78,11 @@ def read_files(list_files_names,
   return list_data, info
 
 # Cell
-def __dates_sorted__(list_data):
+def __dates_sorted__(list_data, info):
   """
   Construit un objet provisoire [(date.datetime, i_file)]
   """
-  i_date = INFO.index('Date')
+  i_date = info.index('Date')
   dateFormatter = "%m/%d/%Y"
 
   dates = []
@@ -107,8 +107,8 @@ def __ind_chrono_order__(dates_sorted):
   return ind_order
 
 # Cell
-def sort_chrono(list_data):
-  dates_sorted = __dates_sorted__(list_data)
+def sort_chrono(list_data, info):
+  dates_sorted = __dates_sorted__(list_data, info)
   i_new_order = __ind_chrono_order__(dates_sorted)
 
   new_list = []
@@ -170,19 +170,19 @@ def __condition_DATA__(file_data):
     return False
 
 # Cell
-def list_names_channels(data_list):
+def list_names_channels(data_list, info):
   """
   Construction de la liste des noms des capteurs
   """
   assert __condition_DATA__(data_list), 'Fonction uniquement applicable à un fichier DATA'
 
-  i_names_channels = INFO.index('Name Channel')
+  i_names_channels = info.index('Name Channel')
   names_channels = copy(data_list[i_names_channels])
 
   return names_channels
 
 # Cell
-def extract_T0(file_data, info=INFO):
+def extract_T0(file_data, info):
   """
   Renvoie un objet datatime
   """
@@ -204,7 +204,7 @@ def extract_T0(file_data, info=INFO):
 
 # Cell
 def construction_list_df_messung(data_messung,
-                                 info=INFO):
+                                 info):
   """
   Construit et renvoie la liste des DataFrame des séries de mesures en parcourant DATA_MESSUNG
   """
@@ -220,7 +220,7 @@ def construction_list_df_messung(data_messung,
 
   for num_file in range(num_tot_files):
     data_file = data_messung[num_file]
-    names_channels = list_names_channels(data_file)
+    names_channels = list_names_channels(data_file, info)
 
     #On récupère la partie comportant les mesures
     list_mesures = data_file[i_mesures:]
@@ -232,7 +232,7 @@ def construction_list_df_messung(data_messung,
     # df_num_file['Serie de mesures'] = num_file
 
     # Colonne temps global
-    time_0 = extract_T0(data_file)
+    time_0 = extract_T0(data_file, info)
     freq = df_num_file['Zeit  1 - Standardmessrate']
 
     times = [time_0 + timedelta(seconds=float(delta_t)) for delta_t in freq]
@@ -342,7 +342,7 @@ def define_index(df):
   return df_time
 
 # Cell
-def creation_df_hand(file_name='df_hand.csv'):
+def creation_df_hand(file_name):
 
   #Lecture du fichier CSV
   df_hand = pd.read_csv(file_name, delimiter=';')
@@ -357,20 +357,21 @@ def creation_df_hand(file_name='df_hand.csv'):
 # Cell
 def run_computation(list_files_names,
                     structure_data,
-                    file_name_df_hand):
+                    file_name_df_hand,
+                    ):
   """
   Fonction merge DATA --> df_finale
   """
   # Creation des listes images des fichiers
-  list_files_names, INFO = read_files(list_files_names, structure_data)
+  list_files_names, info = read_files(list_files_names, structure_data)
 
-  list_files_names = sort_chrono(list_files_names)
+  list_files_names = sort_chrono(list_files_names, info)
 
   # Suppression des éléments vides
   list_files_names = traitement_elements_vides(list_files_names)
 
   # Construction de la liste des df
-  list_df_messung = construction_list_df_messung(list_files_names)
+  list_df_messung = construction_list_df_messung(list_files_names, info)
 
   # Concatenation des df
   df_messung = concat_df_messung(list_df_messung)
