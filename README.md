@@ -17,7 +17,8 @@
 
 ## Installing
 
-> git clone `https://github.com/PAYEUR/spundsteif`  > pip install -e spundsteif
+> git clone `https://github.com/PAYEUR/spundsteif`>
+> pip install -e spundsteif
 
 *Note that `spundsteif` must be installed into the same python environment that you use for both your Jupyter Server and your workspace.*
 

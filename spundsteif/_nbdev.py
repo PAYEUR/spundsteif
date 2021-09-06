@@ -29,7 +29,14 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "rename_columns": "02_inclinometers.ipynb",
          "add_column_up": "02_inclinometers.ipynb",
          "df_multiindex": "02_inclinometers.ipynb",
-         "run_computation_inklino": "02_inclinometers.ipynb"}
+         "compute_average_A_B": "02_inclinometers.ipynb",
+         "compute_rotations": "02_inclinometers.ipynb",
+         "__deformee__": "02_inclinometers.ipynb",
+         "column_integration": "02_inclinometers.ipynb",
+         "column_deformee_relative": "02_inclinometers.ipynb",
+         "run_computation_inklino": "02_inclinometers.ipynb",
+         "extract_df_datetube": "02_inclinometers.ipynb",
+         "build_fig_defo": "02_inclinometers.ipynb"}
 
 modules = ["sensors.py",
            "inclinometers.py"]
