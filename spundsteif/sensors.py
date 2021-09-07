@@ -3,8 +3,8 @@
 __all__ = ['__construct_INFO__', '__construct_list_DATA__', 'read_files', '__dates_sorted__', '__ind_chrono_order__',
            'sort_chrono', '__elements_vides__', 'traitement_elements_vides', '__condition_DATA__',
            'list_names_channels', 'extract_T0', 'construction_list_df_messung', 'concat_df_messung',
-           'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'conversion_float', 'df_to_m',
-           'define_index', 'creation_df_hand', 'get_data']
+           'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'conversion_float',
+           'change_overhead_values', 'get_automatic_data', 'define_index', 'get_manual_data', 'df_to_m', 'get_data']
 
 # Cell
 import pandas as pd
@@ -320,45 +320,14 @@ def conversion_float(df):
   return df
 
 # Cell
-def df_to_m(df):
-  df_m = copy(df)
-
-  for name_column in df_m.columns:
-    if 'Temp' not in name_column:
-      df_m[name_column] = df_m[name_column] / 1e6
-
-  return df_m
+def change_overhead_values(df):
+  df = df.replace(-1000000.0, np.nan)
+  return df
 
 # Cell
-def define_index(df):
-  df_time = copy(df)
-
-  if 'date' in df.columns:
-
-    df_time['Datetime'] = pd.to_datetime(df_time['date'], format='%d.%m.%Y')
-    df_time = df_time.set_index('Datetime')
-    df_time = df_time.drop(['date'], 1)
-
-  return df_time
-
-# Cell
-def creation_df_hand(file_name):
-
-  #Lecture du fichier CSV
-  df_hand = pd.read_csv(file_name, delimiter=';')
-
-  #Creation de l'index date
-  df_hand = define_index(df_hand)
-
-  df_hand = conversion_float(df_hand)
-
-  return df_hand
-
-# Cell
-def get_data(list_files_names,
-             structure_data,
-             file_name_df_hand,
-             ):
+def get_automatic_data(list_files_names,
+                       structure_data
+                       ):
   """
   Fonction merge DATA --> df_finale
   """
@@ -381,13 +350,66 @@ def get_data(list_files_names,
   df_messung = traitement_colonnes_names(df_messung)
   df_messung = conversion_float(df_messung)
 
-  # Intégration des mesures manuelles
-  df_hand = creation_df_hand(file_name_df_hand)
+  # clean
+  df_messung = conversion_float(df_messung)
+  df_messung = change_overhead_values(df_messung)
 
-  # Concaténation
-  df_messung = pd.concat([df_messung, df_hand])
+  return df_messung
 
-  # Divise les valeurs de pression et defo par 10^6
+# Cell
+def define_index(df):
+  df_time = copy(df)
+
+  if 'date' in df.columns:
+
+    df_time['Datetime'] = pd.to_datetime(df_time['date'], format='%d.%m.%Y')
+    df_time = df_time.set_index('Datetime')
+    df_time = df_time.drop(['date'], 1)
+
+  return df_time
+
+# Cell
+def get_manual_data(file_name):
+
+  #Lecture du fichier CSV
+  df_hand = pd.read_csv(file_name, delimiter=';')
+
+  #Creation de l'index date
+  df_hand = define_index(df_hand)
+
+  # defined for automatic values
+  df_hand = conversion_float(df_hand)
+
+  return df_hand
+
+# Cell
+def df_to_m(df):
+  df_m = copy(df)
+
+  for name_column in df_m.columns:
+    if 'Temp' not in name_column:
+      df_m[name_column] = df_m[name_column] / 1e6
+
+  return df_m
+
+# Cell
+def get_data(list_files_names,
+             structure_data,
+             file_name_df_hand,
+             ):
+  """
+  Fonction merge DATA --> df_finale
+  """
+  # Get automatic data
+  df_automatic = get_automatic_data(list_files_names, structure_data)
+
+  # Get manual data
+  df_hand = get_manual_data(file_name_df_hand)
+
+  # Merge
+  df_messung = pd.concat([df_automatic, df_hand])
+
+  # Change units
   df_messung = df_to_m(df_messung)
 
   return df_messung

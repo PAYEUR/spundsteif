@@ -85,7 +85,7 @@ nb_path: "03_pressures.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Measured-pressure">Measured pressure<a class="anchor-link" href="#Measured-pressure"> </a></h3>
+<h3 id="Automatic-measured-pressure">Automatic measured pressure<a class="anchor-link" href="#Automatic-measured-pressure"> </a></h3>
 </div>
 </div>
 </div>
@@ -96,11 +96,11 @@ nb_path: "03_pressures.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_measured_pressure</span> <span class="o">=</span> <span class="n">sensors</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">list_files_names</span><span class="o">=</span><span class="n">TESTS_FILES_NAMES</span><span class="p">,</span>
-                                        <span class="n">structure_data</span><span class="o">=</span><span class="n">STRUCTURE_DATA</span><span class="p">,</span> 
-                                        <span class="n">file_name_df_hand</span><span class="o">=</span><span class="n">TEST_HAND</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_automatic_pressure</span> <span class="o">=</span> <span class="n">sensors</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">list_files_names</span><span class="o">=</span><span class="n">TESTS_FILES_NAMES</span><span class="p">,</span>
+                                         <span class="n">structure_data</span><span class="o">=</span><span class="n">STRUCTURE_DATA</span><span class="p">,</span> 
+                                         <span class="n">file_name_df_hand</span><span class="o">=</span><span class="n">TEST_HAND</span><span class="p">)</span>
 
-<span class="n">df_measured_pressure</span> <span class="o">=</span> <span class="n">df_measured_pressure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">df_measured_pressure</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;EDS&#39;</span><span class="p">)]</span>
+<span class="n">df_automatic_pressure</span> <span class="o">=</span> <span class="n">df_automatic_pressure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">df_automatic_pressure</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;EDS&#39;</span><span class="p">)]</span>
 </pre></div>
 
     </div>
@@ -117,7 +117,7 @@ nb_path: "03_pressures.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_measured_pressure</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_automatic_pressure</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -164,7 +164,7 @@ nb_path: "03_pressures.ipynb"
       <td>-0.008392</td>
       <td>0.443348</td>
       <td>1.770932</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>-0.013005</td>
       <td>-6.332109</td>
       <td>0.583440</td>
@@ -172,9 +172,9 @@ nb_path: "03_pressures.ipynb"
     <tr>
       <th>2021-07-12 03:26:24.418810</th>
       <td>-0.020542</td>
-      <td>-1.000000</td>
+      <td>NaN</td>
       <td>-0.043438</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>-0.013147</td>
       <td>-6.065709</td>
       <td>5.753562</td>
@@ -184,7 +184,7 @@ nb_path: "03_pressures.ipynb"
       <td>0.011385</td>
       <td>1.370416</td>
       <td>2.557907</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.001380</td>
       <td>-6.130448</td>
       <td>-3.851498</td>
@@ -192,9 +192,9 @@ nb_path: "03_pressures.ipynb"
     <tr>
       <th>2021-07-15 19:29:03.205130</th>
       <td>-0.003976</td>
-      <td>-1.000000</td>
+      <td>NaN</td>
       <td>2.221444</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>-0.013358</td>
       <td>-6.334587</td>
       <td>-1.914825</td>
@@ -204,7 +204,7 @@ nb_path: "03_pressures.ipynb"
       <td>-0.015499</td>
       <td>3.369134</td>
       <td>-0.038738</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.003474</td>
       <td>-6.159601</td>
       <td>-0.020800</td>
@@ -214,7 +214,7 @@ nb_path: "03_pressures.ipynb"
       <td>0.017093</td>
       <td>4.470687</td>
       <td>2.422170</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.000345</td>
       <td>-6.302468</td>
       <td>-4.388151</td>
@@ -234,7 +234,7 @@ nb_path: "03_pressures.ipynb"
       <td>0.018375</td>
       <td>4.841653</td>
       <td>2.529231</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.004594</td>
       <td>-6.092389</td>
       <td>-3.946954</td>
@@ -244,7 +244,7 @@ nb_path: "03_pressures.ipynb"
       <td>0.010717</td>
       <td>0.998889</td>
       <td>2.490023</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.006505</td>
       <td>-6.300282</td>
       <td>-3.930138</td>
@@ -254,7 +254,7 @@ nb_path: "03_pressures.ipynb"
       <td>0.007363</td>
       <td>1.635157</td>
       <td>-0.019435</td>
-      <td>-1.0</td>
+      <td>NaN</td>
       <td>0.025754</td>
       <td>-6.187036</td>
       <td>-0.024776</td>
@@ -262,6 +262,73 @@ nb_path: "03_pressures.ipynb"
   </tbody>
 </table>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_automatic_pressure</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(128, 7)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df_automatic_pressure</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0, 7)</pre>
 </div>
 
 </div>
@@ -357,8 +424,8 @@ nb_path: "03_pressures.ipynb"
       <th></th>
       <th>Datum</th>
       <th>Zeit</th>
-      <th>Tiefe/Piste [m]</th>
-      <th>Temp /°C</th>
+      <th>Tiefe/Top Spundwand [m]</th>
+      <th>Temp [°C]</th>
     </tr>
   </thead>
   <tbody>
@@ -366,63 +433,63 @@ nb_path: "03_pressures.ipynb"
       <th>0</th>
       <td>06.07.2021</td>
       <td>10:21:00</td>
-      <td>-1.10</td>
+      <td>2.20</td>
       <td>14.4</td>
     </tr>
     <tr>
       <th>1</th>
       <td>07.07.2021</td>
       <td>12:00:00</td>
-      <td>-1.05</td>
+      <td>2.15</td>
       <td>17.3</td>
     </tr>
     <tr>
       <th>2</th>
       <td>14.07.2021</td>
       <td>10:30:00</td>
-      <td>-0.82</td>
+      <td>1.92</td>
       <td>14.5</td>
     </tr>
     <tr>
       <th>3</th>
       <td>21.07.2021</td>
       <td>09:30:00</td>
-      <td>-2.23</td>
+      <td>3.33</td>
       <td>13.1</td>
     </tr>
     <tr>
       <th>4</th>
       <td>28.07.2021</td>
       <td>10:00:00</td>
-      <td>-1.01</td>
+      <td>1.51</td>
       <td>12.3</td>
     </tr>
     <tr>
       <th>5</th>
       <td>05.08.2021</td>
       <td>09:00:00</td>
-      <td>-0.92</td>
+      <td>1.42</td>
       <td>13.0</td>
     </tr>
     <tr>
       <th>6</th>
       <td>11.08.2021</td>
       <td>09:00:00</td>
-      <td>-1.33</td>
+      <td>1.83</td>
       <td>14.8</td>
     </tr>
     <tr>
       <th>7</th>
       <td>18.08.2021</td>
       <td>09:30:00</td>
-      <td>-1.30</td>
+      <td>1.80</td>
       <td>18.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>25.08.2021</td>
       <td>11:10:00</td>
-      <td>-1.52</td>
+      <td>2.02</td>
       <td>13.6</td>
     </tr>
   </tbody>
@@ -500,7 +567,7 @@ nb_path: "03_pressures.ipynb"
       <td>07:30:00</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>2</th>
@@ -599,8 +666,8 @@ nb_path: "03_pressures.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Tiefe/Piste [m]    float64
-Temp /°C           float64
+<pre>Tiefe/Top Spundwand [m]    float64
+Temp [°C]                  float64
 dtype: object</pre>
 </div>
 
@@ -664,8 +731,8 @@ dtype: object</pre>
 <span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_excavation</span><span class="p">[</span><span class="s1">&#39;Aushubstiefe/Verklebtebohlen [m]&#39;</span><span class="p">])</span>
 <span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_excavation</span><span class="p">[</span><span class="s1">&#39;Aushubstiefe/Einzelbohlen [m]&#39;</span><span class="p">])</span>
 
-<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_piezo</span><span class="p">[</span><span class="s1">&#39;Tiefe/Piste [m]&#39;</span><span class="p">])</span>
-<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_piezo</span><span class="p">[</span><span class="s1">&#39;Temp /°C&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_piezo</span><span class="p">[</span><span class="s1">&#39;Tiefe/Top Spundwand [m]&#39;</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_float_dtype</span><span class="p">(</span><span class="n">df_piezo</span><span class="p">[</span><span class="s1">&#39;Temp [°C]&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -771,8 +838,8 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Tiefe/Piste [m]</th>
-      <th>Temp /°C</th>
+      <th>Tiefe/Top Spundwand [m]</th>
+      <th>Temp [°C]</th>
       <th>Aushubstiefe/Verklebtebohlen [m]</th>
       <th>Aushubstiefe/Einzelbohlen [m]</th>
       <th>Tiefe/Aktivenseite [m]</th>
@@ -789,7 +856,7 @@ dtype: object</pre>
   <tbody>
     <tr>
       <th>2021-07-06</th>
-      <td>-1.10</td>
+      <td>2.20</td>
       <td>14.4</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -797,7 +864,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-07-07</th>
-      <td>-1.05</td>
+      <td>2.15</td>
       <td>17.3</td>
       <td>1.1</td>
       <td>1.1</td>
@@ -805,7 +872,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-07-14</th>
-      <td>-0.82</td>
+      <td>1.92</td>
       <td>14.5</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -813,15 +880,15 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-07-21</th>
-      <td>-2.23</td>
+      <td>3.33</td>
       <td>13.1</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>2021-07-28</th>
-      <td>-1.01</td>
+      <td>1.51</td>
       <td>12.3</td>
       <td>1.8</td>
       <td>1.1</td>
@@ -829,7 +896,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-08-05</th>
-      <td>-0.92</td>
+      <td>1.42</td>
       <td>13.0</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -837,7 +904,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-08-11</th>
-      <td>-1.33</td>
+      <td>1.83</td>
       <td>14.8</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -845,7 +912,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-08-18</th>
-      <td>-1.30</td>
+      <td>1.80</td>
       <td>18.0</td>
       <td>1.8</td>
       <td>1.1</td>
@@ -853,7 +920,7 @@ dtype: object</pre>
     </tr>
     <tr>
       <th>2021-08-25</th>
-      <td>-1.52</td>
+      <td>2.02</td>
       <td>13.6</td>
       <td>1.8</td>
       <td>1.1</td>
@@ -949,7 +1016,7 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Temp /°C</th>
+      <th>Temp [°C]</th>
       <th>Aushubstiefe/Verklebtebohlen [m]</th>
       <th>Aushubstiefe/Einzelbohlen [m]</th>
       <th>Tiefe/Aktivenseite [m]</th>
@@ -971,7 +1038,7 @@ dtype: object</pre>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.60</td>
+      <td>2.20</td>
     </tr>
     <tr>
       <th>2021-07-07</th>
@@ -979,7 +1046,7 @@ dtype: object</pre>
       <td>1.1</td>
       <td>1.1</td>
       <td>1.0</td>
-      <td>1.55</td>
+      <td>2.15</td>
     </tr>
     <tr>
       <th>2021-07-14</th>
@@ -987,15 +1054,15 @@ dtype: object</pre>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.32</td>
+      <td>1.92</td>
     </tr>
     <tr>
       <th>2021-07-21</th>
       <td>13.1</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
-      <td>2.73</td>
+      <td>0.5</td>
+      <td>3.33</td>
     </tr>
     <tr>
       <th>2021-07-28</th>
@@ -1057,7 +1124,7 @@ dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">df_manual</span><span class="p">[</span><span class="s1">&#39;GWT [m]&#39;</span><span class="p">][</span><span class="s1">&#39;2021-07-06&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.6</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">df_manual</span><span class="p">[</span><span class="s1">&#39;GWT [m]&#39;</span><span class="p">][</span><span class="s1">&#39;2021-07-06&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">2.2</span>
 </pre></div>
 
     </div>
@@ -1144,7 +1211,7 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Temp /°C</th>
+      <th>Temp [°C]</th>
       <th>Aushubstiefe/Verklebtebohlen [m]</th>
       <th>Aushubstiefe/Einzelbohlen [m]</th>
       <th>Tiefe/Aktivenseite [m]</th>
@@ -1166,7 +1233,7 @@ dtype: object</pre>
       <td>1.1</td>
       <td>1.1</td>
       <td>1.0</td>
-      <td>1.60</td>
+      <td>2.20</td>
     </tr>
     <tr>
       <th>2021-07-07</th>
@@ -1174,23 +1241,23 @@ dtype: object</pre>
       <td>1.1</td>
       <td>1.1</td>
       <td>1.0</td>
-      <td>1.55</td>
+      <td>2.15</td>
     </tr>
     <tr>
       <th>2021-07-14</th>
       <td>14.5</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
-      <td>1.32</td>
+      <td>0.5</td>
+      <td>1.92</td>
     </tr>
     <tr>
       <th>2021-07-21</th>
       <td>13.1</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
-      <td>2.73</td>
+      <td>0.5</td>
+      <td>3.33</td>
     </tr>
     <tr>
       <th>2021-07-28</th>
@@ -1340,7 +1407,7 @@ dtype: object</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Temp /°C</th>
+      <th>Temp [°C]</th>
       <th>Aushubstiefe/Verklebtebohlen [m]</th>
       <th>Aushubstiefe/Einzelbohlen [m]</th>
       <th>Tiefe/Aktivenseite [m]</th>
@@ -1362,7 +1429,7 @@ dtype: object</pre>
       <td>1.1</td>
       <td>1.1</td>
       <td>1.0</td>
-      <td>1.60</td>
+      <td>2.20</td>
     </tr>
     <tr>
       <th>2021-07-07</th>
@@ -1370,23 +1437,23 @@ dtype: object</pre>
       <td>1.1</td>
       <td>1.1</td>
       <td>1.0</td>
-      <td>1.55</td>
+      <td>2.15</td>
     </tr>
     <tr>
       <th>2021-07-14</th>
       <td>14.5</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
-      <td>1.32</td>
+      <td>0.5</td>
+      <td>1.92</td>
     </tr>
     <tr>
       <th>2021-07-21</th>
       <td>13.1</td>
       <td>1.1</td>
       <td>1.1</td>
-      <td>1.0</td>
-      <td>2.73</td>
+      <td>0.5</td>
+      <td>3.33</td>
     </tr>
     <tr>
       <th>2021-07-28</th>
@@ -1441,6 +1508,108 @@ dtype: object</pre>
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="n">df_manual</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Temp [°C]&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+  <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+      <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_manual</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df_manual</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> 
+                  <span class="n">name</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> 
+                  <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span> 
+                  <span class="n">marker_size</span><span class="o">=</span><span class="mi">3</span>
+      <span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="c1"># Mise en page</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">30</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Manual data&#39;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Depth in m&quot;</span><span class="p">,</span>
+    <span class="n">title_font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;Rockwell&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">18</span><span class="p">),</span>
+    <span class="n">yaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">autorange</span><span class="o">=</span><span class="s2">&quot;reversed&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="5802e083-03ec-42d4-9eba-e47bbca0d749" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("5802e083-03ec-42d4-9eba-e47bbca0d749")) {
+                    Plotly.newPlot(
+                        '5802e083-03ec-42d4-9eba-e47bbca0d749',
+                        [{"marker": {"size": 3}, "mode": "lines+markers", "name": "Aushubstiefe/Verklebtebohlen [m]", "type": "scatter", "x": ["2021-07-06T00:00:00", "2021-07-07T00:00:00", "2021-07-14T00:00:00", "2021-07-21T00:00:00", "2021-07-28T00:00:00", "2021-08-05T00:00:00", "2021-08-11T00:00:00", "2021-08-18T00:00:00", "2021-08-25T00:00:00"], "y": [1.1, 1.1, 1.1, 1.1, 1.8, 1.8, 1.8, 1.8, 1.8]}, {"marker": {"size": 3}, "mode": "lines+markers", "name": "Aushubstiefe/Einzelbohlen [m]", "type": "scatter", "x": ["2021-07-06T00:00:00", "2021-07-07T00:00:00", "2021-07-14T00:00:00", "2021-07-21T00:00:00", "2021-07-28T00:00:00", "2021-08-05T00:00:00", "2021-08-11T00:00:00", "2021-08-18T00:00:00", "2021-08-25T00:00:00"], "y": [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1]}, {"marker": {"size": 3}, "mode": "lines+markers", "name": "Tiefe/Aktivenseite [m]", "type": "scatter", "x": ["2021-07-06T00:00:00", "2021-07-07T00:00:00", "2021-07-14T00:00:00", "2021-07-21T00:00:00", "2021-07-28T00:00:00", "2021-08-05T00:00:00", "2021-08-11T00:00:00", "2021-08-18T00:00:00", "2021-08-25T00:00:00"], "y": [1.0, 1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]}, {"marker": {"size": 3}, "mode": "lines+markers", "name": "GWT [m]", "type": "scatter", "x": ["2021-07-06T00:00:00", "2021-07-07T00:00:00", "2021-07-14T00:00:00", "2021-07-21T00:00:00", "2021-07-28T00:00:00", "2021-08-05T00:00:00", "2021-08-11T00:00:00", "2021-08-18T00:00:00", "2021-08-25T00:00:00"], "y": [2.2, 2.15, 1.92, 3.33, 1.51, 1.42, 1.83, 1.8, 2.02]}],
+                        {"margin": {"b": 30, "l": 30, "r": 30, "t": 50}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"family": "Rockwell", "size": 18}, "text": "Manual data"}, "xaxis": {"title": {"text": "Date"}}, "yaxis": {"autorange": "reversed", "title": {"text": "Depth in m"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('5802e083-03ec-42d4-9eba-e47bbca0d749');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+</body>
+</html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Merge-manual-and-automatic-measures">Merge manual and automatic measures<a class="anchor-link" href="#Merge-manual-and-automatic-measures"> </a></h3>
@@ -1453,6 +1622,37 @@ dtype: object</pre>
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="merge_manual_automatic" class="doc_header"><code>merge_manual_automatic</code><a href="https://github.com/PAYEUR/spundsteif/tree/master/spundsteif/pressures.py#L81" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>merge_manual_automatic</code>(<strong><code>df_manual</code></strong>, <strong><code>df_automatic</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Clean">Clean<a class="anchor-link" href="#Clean"> </a></h4>
