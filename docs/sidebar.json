@@ -2,6 +2,7 @@
   "spundsteif": {
     "Overview": "/",
     "Library data sensor": "sensors.html",
-    "Library inclinometers": "inclinometers.html"
+    "Library inclinometers": "inclinometers.html",
+    "Library pressures": "pressures.html"
   }
 }

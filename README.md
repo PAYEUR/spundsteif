@@ -40,7 +40,7 @@ For example let us get a cleaned `pandas.dataframe` from a bunch of raw data.
 Import library and desired function
 
 ```
-from spundsteif.sensors import run_computation
+from spundsteif.sensors import get_data
 ```
 
 Upload raw data as files  
@@ -60,9 +60,9 @@ HAND_FILE = './test/df_hand_test.csv'
 Get structured and cleaned `pandas.dataframe`
 
 ```
-df = run_computation(list_files_names=AUTOMATIC_FILES,
-                     structure_data=STRUCTURE_FILE, 
-                     file_name_df_hand=HAND_FILE)
+df = get_data(list_files_names=AUTOMATIC_FILES,
+              structure_data=STRUCTURE_FILE, 
+              file_name_df_hand=HAND_FILE)
 ```
 
 ```
