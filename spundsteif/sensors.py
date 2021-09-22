@@ -4,7 +4,8 @@ __all__ = ['__construct_INFO__', '__construct_list_DATA__', 'read_files', '__dat
            'sort_chrono', '__elements_vides__', 'traitement_elements_vides', '__condition_DATA__',
            'list_names_channels', 'extract_T0', 'construction_list_df_messung', 'concat_df_messung',
            'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'conversion_float',
-           'change_overhead_values', 'get_automatic_data', 'define_index', 'get_manual_data', 'df_to_m', 'get_data']
+           'change_overhead_values', 'downsample', 'get_automatic_data', 'define_index', 'get_manual_data', 'df_to_m',
+           'get_data']
 
 # Cell
 import pandas as pd
@@ -325,6 +326,10 @@ def change_overhead_values(df):
   return df
 
 # Cell
+def downsample(df):
+  return df.resample('d').mean()
+
+# Cell
 def get_automatic_data(list_files_names,
                        structure_data
                        ):
@@ -353,6 +358,8 @@ def get_automatic_data(list_files_names,
   # clean
   df_messung = conversion_float(df_messung)
   df_messung = change_overhead_values(df_messung)
+  df_messung = downsample(df_messung)
+
 
   return df_messung
 
