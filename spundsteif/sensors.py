@@ -373,7 +373,7 @@ def get_automatic_data(list_files_names,
   df_messung = conversion_float(df_messung)
 
   # clear bugg
-  df_messung = patch_buggs_in_column_names(df_messung, '2021-07-15')
+  df_messung = patch_buggs_in_column_names(df_messung, '2021-08-25')
 
   # clean
   df_messung = conversion_float(df_messung)

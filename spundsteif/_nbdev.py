@@ -45,7 +45,9 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "clean": "03_pressures.ipynb",
          "merge_piezo_excavation": "03_pressures.ipynb",
          "clean_manual_df": "03_pressures.ipynb",
-         "merge_manual_automatic": "03_pressures.ipynb"}
+         "merge_manual_automatic": "03_pressures.ipynb",
+         "resample_data": "03_pressures.ipynb",
+         "get_pressures": "03_pressures.ipynb"}
 
 modules = ["sensors.py",
            "inclinometers.py",

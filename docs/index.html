@@ -151,7 +151,11 @@ in this example we will use test data</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">STRUCTURE_FILE</span> <span class="o">=</span> <span class="s1">&#39;./test/1_structure_file.txt&#39;</span>
 
 <span class="c1"># Automatic measurements files</span>
-<span class="n">AUTOMATIC_FILES</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;./test/1_data_test_01.ASC&#39;</span><span class="p">,</span> <span class="s1">&#39;./test/1_data_test_02.txt&#39;</span><span class="p">]</span>
+<span class="n">AUTOMATIC_FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;./test/1_data_test_01.ASC&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;./test/1_data_test_02.txt&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;./test/1_data_test_03.txt&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;./test/1_data_test_04.ASC&#39;</span>
+                   <span class="p">]</span>
 
 <span class="c1"># Hand measured data</span>
 <span class="n">HAND_FILE</span> <span class="o">=</span> <span class="s1">&#39;./test/df_hand_test.csv&#39;</span>
@@ -229,6 +233,25 @@ in this example we will use test data</p>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>EH12</th>
+      <th>EH13</th>
+      <th>EH22</th>
+      <th>EH23</th>
+      <th>EH32</th>
+      <th>EH33</th>
+      <th>EV11</th>
+      <th>EV21</th>
+      <th>EV31</th>
+      <th>VH12</th>
+      <th>VH13</th>
+      <th>VH22</th>
+      <th>VH23</th>
+      <th>VH32</th>
+      <th>VH33</th>
+      <th>W13</th>
+      <th>W23</th>
+      <th>W31</th>
+      <th>W33</th>
       <th>EDS_A</th>
       <th>EDS_B</th>
       <th>EDS_C</th>
@@ -243,7 +266,7 @@ in this example we will use test data</p>
       <th>EH21</th>
       <th>EV22</th>
       <th>EV23</th>
-      <th>EV31</th>
+      <th>EH31</th>
       <th>EV32</th>
       <th>EV33</th>
       <th>VH11</th>
@@ -252,54 +275,62 @@ in this example we will use test data</p>
       <th>W22</th>
       <th>VH31</th>
       <th>W32</th>
-      <th>EH12</th>
-      <th>EH13</th>
-      <th>EH22</th>
-      <th>EH23</th>
-      <th>EH32</th>
-      <th>EH33</th>
-      <th>EV11</th>
-      <th>EV21</th>
-      <th>VH12</th>
-      <th>VH13</th>
-      <th>VH22</th>
-      <th>VH23</th>
-      <th>VH32</th>
-      <th>VH33</th>
       <th>W11</th>
-      <th>W13</th>
       <th>W21</th>
-      <th>W23</th>
-      <th>W31</th>
-      <th>W33</th>
+      <th>EDS_B2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2021-07-07 13:24:40.200000</th>
-      <td>-0.007821</td>
-      <td>2.159839</td>
-      <td>-0.036016</td>
-      <td>-1.0</td>
-      <td>0.012440</td>
-      <td>-6.198071</td>
-      <td>0.020038</td>
-      <td>12.34039</td>
-      <td>18.53559</td>
-      <td>0.004134</td>
-      <td>0.003226</td>
-      <td>0.005147</td>
-      <td>0.004189</td>
-      <td>0.004093</td>
-      <td>0.004815</td>
-      <td>0.005774</td>
-      <td>0.005584</td>
+      <th>2021-07-07</th>
+      <td>NaN</td>
+      <td>-0.003763</td>
+      <td>-0.006972</td>
+      <td>NaN</td>
+      <td>-0.005550</td>
+      <td>-0.005922</td>
+      <td>-0.004817</td>
+      <td>NaN</td>
+      <td>-0.006131</td>
+      <td>-0.004319</td>
+      <td>-0.003196</td>
+      <td>-0.004515</td>
+      <td>-0.003309</td>
+      <td>-0.003690</td>
+      <td>-0.005518</td>
+      <td>-0.004123</td>
+      <td>-0.004489</td>
+      <td>NaN</td>
+      <td>-0.005335</td>
+      <td>-0.006381</td>
+      <td>2.029764</td>
+      <td>-0.031028</td>
+      <td>NaN</td>
+      <td>0.013512</td>
+      <td>-6.204005</td>
+      <td>0.021527</td>
+      <td>12.357636</td>
+      <td>18.489542</td>
+      <td>0.004144</td>
+      <td>0.003231</td>
+      <td>0.005152</td>
+      <td>0.004223</td>
+      <td>0.004081</td>
+      <td>0.004851</td>
+      <td>0.005782</td>
+      <td>0.005594</td>
       <td>0.042620</td>
-      <td>-0.000722</td>
+      <td>-0.000697</td>
       <td>0.042329</td>
-      <td>0.004415</td>
-      <td>0.005715</td>
-      <td>-0.023867</td>
+      <td>0.004422</td>
+      <td>0.005721</td>
+      <td>-0.022922</td>
+      <td>-0.003205</td>
+      <td>-0.004000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-08</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -317,35 +348,37 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.006762</td>
+      <td>2.172570</td>
+      <td>-0.032057</td>
+      <td>NaN</td>
+      <td>0.012113</td>
+      <td>-6.179858</td>
+      <td>-0.023439</td>
+      <td>12.318925</td>
+      <td>18.114148</td>
+      <td>0.007165</td>
+      <td>0.006773</td>
+      <td>0.007164</td>
+      <td>0.005557</td>
+      <td>0.005303</td>
+      <td>0.007963</td>
+      <td>0.006809</td>
+      <td>0.008777</td>
+      <td>0.042620</td>
+      <td>0.000146</td>
+      <td>0.042329</td>
+      <td>0.007886</td>
+      <td>0.009164</td>
+      <td>-0.016134</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-07-07 18:24:44.200860</th>
-      <td>0.000183</td>
-      <td>1.934437</td>
-      <td>-0.020863</td>
-      <td>-1.0</td>
-      <td>0.019554</td>
-      <td>-6.212432</td>
-      <td>0.030182</td>
-      <td>12.36769</td>
-      <td>18.45851</td>
-      <td>0.004182</td>
-      <td>0.003267</td>
-      <td>0.005185</td>
-      <td>0.004286</td>
-      <td>0.004040</td>
-      <td>0.004915</td>
-      <td>0.005817</td>
-      <td>0.005630</td>
-      <td>0.042619</td>
-      <td>-0.000651</td>
-      <td>0.042328</td>
-      <td>0.004461</td>
-      <td>0.005758</td>
-      <td>-0.021864</td>
+      <th>2021-07-09</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -365,194 +398,179 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>-0.002018</td>
+      <td>3.480844</td>
+      <td>-0.044311</td>
       <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2021-07-07 23:24:49.801710</th>
-      <td>-0.008862</td>
-      <td>1.705553</td>
-      <td>-0.026352</td>
-      <td>-1.0</td>
-      <td>0.010957</td>
-      <td>-6.214493</td>
-      <td>0.017809</td>
-      <td>12.39935</td>
-      <td>18.38660</td>
-      <td>0.004136</td>
-      <td>0.003212</td>
-      <td>0.005134</td>
-      <td>0.004263</td>
-      <td>0.004086</td>
-      <td>0.004900</td>
-      <td>0.005769</td>
-      <td>0.005586</td>
-      <td>0.042619</td>
-      <td>-0.000663</td>
-      <td>0.042328</td>
-      <td>0.004404</td>
-      <td>0.005699</td>
-      <td>-0.020916</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.012253</td>
+      <td>-6.144872</td>
+      <td>0.760613</td>
+      <td>13.246442</td>
+      <td>17.389582</td>
+      <td>0.014487</td>
+      <td>0.016234</td>
+      <td>0.012246</td>
+      <td>0.008678</td>
+      <td>0.008949</td>
+      <td>0.015904</td>
+      <td>0.009519</td>
+      <td>0.015991</td>
+      <td>0.042620</td>
+      <td>0.006237</td>
+      <td>0.042329</td>
+      <td>0.017490</td>
+      <td>0.018430</td>
+      <td>-0.013388</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-07-08 04:24:53.602570</th>
-      <td>-0.011061</td>
-      <td>1.723809</td>
-      <td>-0.037398</td>
-      <td>-1.0</td>
-      <td>0.008058</td>
-      <td>-6.196866</td>
-      <td>0.010308</td>
-      <td>12.30714</td>
-      <td>18.27804</td>
-      <td>0.004134</td>
-      <td>0.003200</td>
-      <td>0.005123</td>
-      <td>0.004283</td>
-      <td>0.003924</td>
-      <td>0.004914</td>
-      <td>0.005763</td>
-      <td>0.005582</td>
+      <th>2021-07-10</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.000936</td>
+      <td>5.028151</td>
+      <td>-0.038606</td>
+      <td>NaN</td>
+      <td>0.010894</td>
+      <td>-6.123807</td>
+      <td>3.463341</td>
+      <td>13.552458</td>
+      <td>17.327794</td>
+      <td>0.015309</td>
+      <td>0.016460</td>
+      <td>0.012042</td>
+      <td>0.008468</td>
+      <td>0.008775</td>
+      <td>0.016026</td>
+      <td>0.009515</td>
+      <td>0.016711</td>
       <td>0.042621</td>
-      <td>-0.000563</td>
+      <td>0.014922</td>
       <td>0.042330</td>
-      <td>0.004391</td>
-      <td>0.005689</td>
-      <td>-0.020005</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.017554</td>
+      <td>0.018613</td>
+      <td>-0.010094</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-07-08 09:24:58.203420</th>
-      <td>-0.007851</td>
-      <td>1.962178</td>
-      <td>-0.032659</td>
-      <td>-1.0</td>
-      <td>0.011167</td>
-      <td>-6.175929</td>
-      <td>-0.058488</td>
-      <td>12.36118</td>
-      <td>18.17512</td>
-      <td>0.004160</td>
-      <td>0.003219</td>
-      <td>0.005140</td>
-      <td>0.004328</td>
-      <td>0.003960</td>
-      <td>0.004958</td>
-      <td>0.005784</td>
-      <td>0.005419</td>
+      <th>2021-07-11</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.002398</td>
+      <td>4.736352</td>
+      <td>-0.034460</td>
+      <td>NaN</td>
+      <td>0.005557</td>
+      <td>-6.089783</td>
+      <td>5.486969</td>
+      <td>13.274016</td>
+      <td>17.700372</td>
+      <td>0.015841</td>
+      <td>0.016962</td>
+      <td>0.012288</td>
+      <td>0.008587</td>
+      <td>0.008922</td>
+      <td>0.016648</td>
+      <td>0.009533</td>
+      <td>0.017905</td>
       <td>0.042620</td>
-      <td>-0.000595</td>
+      <td>0.015743</td>
       <td>0.042329</td>
-      <td>0.004408</td>
-      <td>0.005704</td>
-      <td>-0.019212</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>0.018227</td>
+      <td>0.019220</td>
+      <td>-0.009310</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <th>2021-07-12</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.002243</td>
+      <td>5.255263</td>
+      <td>0.089889</td>
+      <td>NaN</td>
+      <td>0.007241</td>
+      <td>-6.078723</td>
+      <td>5.736801</td>
+      <td>13.096946</td>
+      <td>17.867130</td>
+      <td>0.016136</td>
+      <td>0.017605</td>
+      <td>0.012356</td>
+      <td>0.008552</td>
+      <td>0.008982</td>
+      <td>0.016800</td>
+      <td>0.009551</td>
+      <td>0.018268</td>
+      <td>0.042621</td>
+      <td>0.016131</td>
+      <td>0.042330</td>
+      <td>0.018628</td>
+      <td>0.019753</td>
+      <td>-0.008927</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-07-21 00:00:00.000000</th>
+      <th>2021-07-13</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -567,7 +585,88 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>-0.005671</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.016261</td>
+      <td>3.421834</td>
+      <td>0.495277</td>
+      <td>NaN</td>
+      <td>-0.019673</td>
+      <td>-6.048677</td>
+      <td>5.130718</td>
+      <td>13.809313</td>
+      <td>17.903382</td>
+      <td>0.016257</td>
+      <td>0.017463</td>
+      <td>0.012466</td>
+      <td>0.008512</td>
+      <td>0.009051</td>
+      <td>0.016656</td>
+      <td>0.009475</td>
+      <td>0.018469</td>
+      <td>0.042620</td>
+      <td>0.016350</td>
+      <td>0.042329</td>
+      <td>0.018674</td>
+      <td>0.019717</td>
+      <td>-0.008496</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-14</th>
+      <td>NaN</td>
+      <td>-0.003540</td>
+      <td>-0.006531</td>
+      <td>NaN</td>
+      <td>-0.005116</td>
+      <td>-0.005224</td>
+      <td>-0.004501</td>
+      <td>NaN</td>
+      <td>-0.005668</td>
+      <td>-0.004040</td>
+      <td>-0.002720</td>
+      <td>-0.004046</td>
+      <td>NaN</td>
+      <td>-0.003198</td>
+      <td>-0.005097</td>
+      <td>-0.003871</td>
+      <td>-0.003533</td>
+      <td>NaN</td>
+      <td>-0.004751</td>
+      <td>-0.007075</td>
+      <td>0.609300</td>
+      <td>1.528713</td>
+      <td>NaN</td>
+      <td>-0.015327</td>
+      <td>-6.331498</td>
+      <td>1.574850</td>
+      <td>14.520733</td>
+      <td>17.041056</td>
+      <td>0.007767</td>
+      <td>0.007600</td>
+      <td>0.007057</td>
+      <td>0.005066</td>
+      <td>0.005145</td>
+      <td>0.008104</td>
+      <td>0.006539</td>
+      <td>0.009117</td>
+      <td>0.042620</td>
+      <td>0.006647</td>
+      <td>0.042328</td>
+      <td>0.008656</td>
+      <td>0.009869</td>
+      <td>-0.016945</td>
+      <td>-0.003395</td>
+      <td>-0.003561</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-15</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -576,6 +675,286 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.005904</td>
+      <td>0.419319</td>
+      <td>2.106431</td>
+      <td>NaN</td>
+      <td>-0.009170</td>
+      <td>-6.333763</td>
+      <td>-1.489162</td>
+      <td>14.475628</td>
+      <td>16.775894</td>
+      <td>0.003816</td>
+      <td>0.002898</td>
+      <td>0.004597</td>
+      <td>0.003586</td>
+      <td>0.003385</td>
+      <td>0.004262</td>
+      <td>0.005094</td>
+      <td>0.004888</td>
+      <td>NaN</td>
+      <td>0.001955</td>
+      <td>NaN</td>
+      <td>0.003967</td>
+      <td>0.005172</td>
+      <td>-0.019002</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-16</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.000332</td>
+      <td>0.675779</td>
+      <td>2.315424</td>
+      <td>NaN</td>
+      <td>-0.005186</td>
+      <td>-6.334882</td>
+      <td>-2.319801</td>
+      <td>14.548817</td>
+      <td>16.596679</td>
+      <td>0.003843</td>
+      <td>0.002941</td>
+      <td>0.004606</td>
+      <td>0.003634</td>
+      <td>0.003385</td>
+      <td>0.004381</td>
+      <td>0.005099</td>
+      <td>0.004903</td>
+      <td>NaN</td>
+      <td>0.001984</td>
+      <td>NaN</td>
+      <td>0.003989</td>
+      <td>0.005228</td>
+      <td>-0.016058</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-17</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.000292</td>
+      <td>0.837099</td>
+      <td>2.498047</td>
+      <td>NaN</td>
+      <td>-0.004487</td>
+      <td>-6.308011</td>
+      <td>-3.111436</td>
+      <td>13.469690</td>
+      <td>16.904306</td>
+      <td>0.003876</td>
+      <td>0.002947</td>
+      <td>0.004595</td>
+      <td>0.003514</td>
+      <td>0.003255</td>
+      <td>0.003644</td>
+      <td>0.005083</td>
+      <td>0.004860</td>
+      <td>NaN</td>
+      <td>0.000690</td>
+      <td>NaN</td>
+      <td>0.003984</td>
+      <td>0.005305</td>
+      <td>-0.013781</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-18</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.006446</td>
+      <td>0.849900</td>
+      <td>2.545558</td>
+      <td>NaN</td>
+      <td>-0.001639</td>
+      <td>-6.176094</td>
+      <td>-3.770186</td>
+      <td>13.360307</td>
+      <td>17.207113</td>
+      <td>0.003921</td>
+      <td>0.002975</td>
+      <td>0.004612</td>
+      <td>0.003586</td>
+      <td>0.003275</td>
+      <td>0.003063</td>
+      <td>0.005100</td>
+      <td>0.004872</td>
+      <td>NaN</td>
+      <td>-0.000353</td>
+      <td>NaN</td>
+      <td>0.004011</td>
+      <td>0.005332</td>
+      <td>-0.012060</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-19</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.002943</td>
+      <td>4.330973</td>
+      <td>2.551859</td>
+      <td>NaN</td>
+      <td>-0.008701</td>
+      <td>-6.134504</td>
+      <td>-3.972481</td>
+      <td>13.162426</td>
+      <td>17.564154</td>
+      <td>0.003933</td>
+      <td>0.002973</td>
+      <td>0.004600</td>
+      <td>0.003654</td>
+      <td>0.003284</td>
+      <td>0.003057</td>
+      <td>0.005089</td>
+      <td>0.004867</td>
+      <td>NaN</td>
+      <td>-0.000302</td>
+      <td>NaN</td>
+      <td>0.004016</td>
+      <td>0.005324</td>
+      <td>-0.010596</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-20</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.002650</td>
+      <td>4.464540</td>
+      <td>2.477285</td>
+      <td>NaN</td>
+      <td>-0.012947</td>
+      <td>-6.300095</td>
+      <td>-4.360508</td>
+      <td>13.003875</td>
+      <td>17.928115</td>
+      <td>0.003940</td>
+      <td>0.002965</td>
+      <td>0.004580</td>
+      <td>0.003628</td>
+      <td>0.003069</td>
+      <td>0.003068</td>
+      <td>0.005069</td>
+      <td>0.004849</td>
+      <td>NaN</td>
+      <td>-0.000313</td>
+      <td>NaN</td>
+      <td>0.004011</td>
+      <td>0.005310</td>
+      <td>-0.009375</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-21</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.006620</td>
@@ -584,21 +963,46 @@ in this example we will use test data</p>
       <td>-0.005513</td>
       <td>-0.004670</td>
       <td>NaN</td>
+      <td>-0.005671</td>
       <td>-0.004198</td>
       <td>-0.002872</td>
       <td>-0.004110</td>
       <td>NaN</td>
       <td>-0.003165</td>
       <td>-0.005094</td>
-      <td>-0.003556</td>
       <td>-0.004029</td>
-      <td>-0.003539</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.004647</td>
+      <td>-0.009055</td>
+      <td>4.607471</td>
+      <td>2.535880</td>
+      <td>NaN</td>
+      <td>-0.031098</td>
+      <td>-6.303607</td>
+      <td>-4.200203</td>
+      <td>12.962358</td>
+      <td>18.283868</td>
+      <td>0.003867</td>
+      <td>0.002919</td>
+      <td>0.004495</td>
+      <td>0.003521</td>
+      <td>0.002928</td>
+      <td>0.003005</td>
+      <td>0.004978</td>
+      <td>0.004761</td>
+      <td>NaN</td>
+      <td>-0.000544</td>
+      <td>NaN</td>
+      <td>0.003925</td>
+      <td>0.005160</td>
+      <td>-0.008701</td>
+      <td>-0.003556</td>
+      <td>-0.003539</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-07-28 00:00:00.000000</th>
+      <th>2021-07-22</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -613,7 +1017,6 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>-0.005546</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -622,6 +1025,272 @@ in this example we will use test data</p>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-23</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-24</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-25</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-26</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-27</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2021-07-28</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.006407</td>
@@ -630,44 +1299,46 @@ in this example we will use test data</p>
       <td>-0.005415</td>
       <td>-0.004631</td>
       <td>NaN</td>
+      <td>-0.005546</td>
       <td>-0.004140</td>
       <td>-0.002925</td>
       <td>-0.003981</td>
       <td>NaN</td>
       <td>-0.003050</td>
       <td>-0.004907</td>
-      <td>NaN</td>
       <td>-0.003994</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>NaN</td>
       <td>-0.004491</td>
+      <td>-0.004589</td>
+      <td>4.104563</td>
+      <td>2.399945</td>
+      <td>NaN</td>
+      <td>5.314356</td>
+      <td>-6.110245</td>
+      <td>-2.975591</td>
+      <td>15.571345</td>
+      <td>18.982930</td>
+      <td>0.003855</td>
+      <td>0.003009</td>
+      <td>0.004254</td>
+      <td>0.003326</td>
+      <td>0.002419</td>
+      <td>0.002837</td>
+      <td>0.004725</td>
+      <td>0.004678</td>
+      <td>NaN</td>
+      <td>-0.000087</td>
+      <td>NaN</td>
+      <td>0.003792</td>
+      <td>0.005099</td>
+      <td>-0.003606</td>
+      <td>0.003360</td>
+      <td>0.003121</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-08-05 00:00:00.000000</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-0.005543</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2021-08-05</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.006422</td>
@@ -676,44 +1347,46 @@ in this example we will use test data</p>
       <td>-0.005412</td>
       <td>-0.004662</td>
       <td>NaN</td>
+      <td>-0.005543</td>
       <td>-0.004126</td>
       <td>-0.002924</td>
       <td>-0.003975</td>
       <td>NaN</td>
       <td>-0.003100</td>
       <td>-0.004939</td>
-      <td>NaN</td>
       <td>-0.004047</td>
-      <td>NaN</td>
       <td>-0.003224</td>
       <td>NaN</td>
       <td>-0.004467</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-08-11 00:00:00.000000</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-0.005584</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2021-08-11</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.006485</td>
@@ -722,44 +1395,46 @@ in this example we will use test data</p>
       <td>-0.005430</td>
       <td>-0.004804</td>
       <td>NaN</td>
+      <td>-0.005584</td>
       <td>-0.004316</td>
       <td>-0.003003</td>
       <td>-0.004073</td>
       <td>NaN</td>
       <td>-0.002577</td>
       <td>-0.005021</td>
-      <td>NaN</td>
       <td>-0.004119</td>
-      <td>NaN</td>
       <td>-0.003282</td>
       <td>NaN</td>
       <td>-0.004521</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>2021-08-18 00:00:00.000000</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>2021-08-18</th>
       <td>NaN</td>
       <td>NaN</td>
       <td>-0.006408</td>
@@ -768,22 +1443,46 @@ in this example we will use test data</p>
       <td>-0.005420</td>
       <td>-0.004828</td>
       <td>NaN</td>
+      <td>NaN</td>
       <td>-0.004390</td>
       <td>-0.002989</td>
       <td>-0.004282</td>
       <td>NaN</td>
       <td>-0.003140</td>
       <td>-0.004485</td>
-      <td>NaN</td>
       <td>-0.004109</td>
-      <td>NaN</td>
       <td>-0.003276</td>
       <td>NaN</td>
       <td>-0.004505</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>124 rows × 43 columns</p>
 </div>
 </div>
 
