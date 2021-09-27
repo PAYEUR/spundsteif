@@ -3,9 +3,9 @@
 __all__ = ['__construct_INFO__', '__construct_list_DATA__', 'read_files', '__dates_sorted__', '__ind_chrono_order__',
            'sort_chrono', '__elements_vides__', 'traitement_elements_vides', '__condition_DATA__',
            'list_names_channels', 'extract_T0', 'construction_list_df_messung', 'concat_df_messung',
-           'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'conversion_float',
-           'change_overhead_values', 'downsample', 'get_automatic_data', 'define_index', 'get_manual_data', 'df_to_m',
-           'get_data']
+           'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'patch_buggs_in_column_names',
+           'conversion_float', 'change_overhead_values', 'downsample', 'get_automatic_data', 'define_index',
+           'get_manual_data', 'df_to_m', 'get_data']
 
 # Cell
 import pandas as pd
@@ -287,7 +287,7 @@ def __clean_name__(name_column_CH):
     new_name = SENSOR_INDICE
 
   else :
-    return name_column_CH #La string a déjä été traitée
+    return name_column_CH #La string a déja été traitée
 
   return new_name
 
@@ -309,6 +309,23 @@ def traitement_colonnes_names(df_messung):
   df_messung.columns = new_names
 
   return df_messung
+
+# Cell
+def patch_buggs_in_column_names(df, date_of_switch_sensor_B):
+
+  # CH_4_EH13 is missing on the second Station
+  #TODO
+
+  #'EV31' in t.columns but it should be 'EH31'
+  df = df.rename(columns={'EV31': 'EH31'})
+
+  # Sensor B has been switched with sensor B2 from 25.05.2021
+  df['EDS_B2'] = df['EDS_B']
+  df.loc[df.index < date_of_switch_sensor_B, "EDS_B2"] = np.nan
+  df.loc[df.index >= date_of_switch_sensor_B, "EDS_B"] = np.nan
+
+
+  return df
 
 # Cell
 def conversion_float(df):
@@ -354,6 +371,9 @@ def get_automatic_data(list_files_names,
   df_messung = traitement_colonnes_zeit(df_messung)
   df_messung = traitement_colonnes_names(df_messung)
   df_messung = conversion_float(df_messung)
+
+  # clear bugg
+  df_messung = patch_buggs_in_column_names(df_messung, '2021-07-15')
 
   # clean
   df_messung = conversion_float(df_messung)
@@ -414,9 +434,20 @@ def get_data(list_files_names,
   df_hand = get_manual_data(file_name_df_hand)
 
   # Merge
-  df_messung = pd.concat([df_automatic, df_hand])
+  ## fill na to avoid getting new columns
+  for col in ['W11', 'W21']:
+    df_automatic[col].fillna(df_hand[col], inplace=True)
+    df_hand.drop(columns=col, inplace=True)
+
+  ## merge
+  df_messung = pd.merge(df_hand, df_automatic, left_index=True, right_index=True, how='outer')
+
+  #df_messung = pd.concat([df_automatic, df_hand])
 
   # Change units
   df_messung = df_to_m(df_messung)
+
+  # Sort values
+  df_messung = df_messung.sort_index()
 
   return df_messung
