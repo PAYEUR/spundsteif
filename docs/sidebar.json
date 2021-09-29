@@ -3,6 +3,7 @@
     "Overview": "/",
     "Library data sensor": "sensors.html",
     "Library inclinometers": "inclinometers.html",
-    "Library pressures": "pressures.html"
+    "Library pressures": "pressures.html",
+    "Library deformations": "deformations.html"
   }
 }

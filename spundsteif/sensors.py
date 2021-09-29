@@ -5,7 +5,7 @@ __all__ = ['__construct_INFO__', '__construct_list_DATA__', 'read_files', '__dat
            'list_names_channels', 'extract_T0', 'construction_list_df_messung', 'concat_df_messung',
            'traitement_colonnes_zeit', '__clean_name__', 'traitement_colonnes_names', 'patch_buggs_in_column_names',
            'conversion_float', 'change_overhead_values', 'downsample', 'get_automatic_data', 'define_index',
-           'get_manual_data', 'df_to_m', 'get_data']
+           'get_manual_data', 'get_data']
 
 # Cell
 import pandas as pd
@@ -410,16 +410,6 @@ def get_manual_data(file_name):
   return df_hand
 
 # Cell
-def df_to_m(df):
-  df_m = copy(df)
-
-  for name_column in df_m.columns:
-    if 'Temp' not in name_column:
-      df_m[name_column] = df_m[name_column] / 1e6
-
-  return df_m
-
-# Cell
 def get_data(list_files_names,
              structure_data,
              file_name_df_hand,
@@ -441,11 +431,6 @@ def get_data(list_files_names,
 
   ## merge
   df_messung = pd.merge(df_hand, df_automatic, left_index=True, right_index=True, how='outer')
-
-  #df_messung = pd.concat([df_automatic, df_hand])
-
-  # Change units
-  df_messung = df_to_m(df_messung)
 
   # Sort values
   df_messung = df_messung.sort_index()

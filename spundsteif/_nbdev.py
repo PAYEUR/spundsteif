@@ -25,7 +25,6 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "get_automatic_data": "01_sensors.ipynb",
          "define_index": "01_sensors.ipynb",
          "get_manual_data": "03_pressures.ipynb",
-         "df_to_m": "01_sensors.ipynb",
          "get_data": "01_sensors.ipynb",
          "construct_df_csv": "03_pressures.ipynb",
          "drop_columns": "02_inclinometers.ipynb",
@@ -42,7 +41,7 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "run_computation_inklino": "02_inclinometers.ipynb",
          "extract_df_datetube": "02_inclinometers.ipynb",
          "build_fig_defo": "02_inclinometers.ipynb",
-         "clean": "03_pressures.ipynb",
+         "clean": "04_deformations.ipynb",
          "merge_piezo_excavation": "03_pressures.ipynb",
          "clean_manual_df": "03_pressures.ipynb",
          "merge_manual_automatic": "03_pressures.ipynb",
@@ -51,7 +50,8 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
 
 modules = ["sensors.py",
            "inclinometers.py",
-           "pressures.py"]
+           "pressures.py",
+           "deformations.py"]
 
 doc_url = "https://PAYEUR.github.io/spundsteif/"
 
