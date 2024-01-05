@@ -29,6 +29,7 @@ def construct_df_csv(file_name):
 
 # Cell
 def drop_columns(df):
+  """ Erase the useless columns from the raw data file """
 
   to_drop = ['format_version',
              'site',
@@ -57,7 +58,7 @@ def drop_columns(df):
 # Cell
 def update_type_date(df):
 
-  str_days = [date.split('T')[0] for date in df['date']] #On conserve uniqument les jours
+  str_days = [date.split('T')[0] for date in df['date']] # We keep only the days
 
   dateFormatter = "%Y-%m-%d"
 
@@ -95,9 +96,11 @@ def compute_average_A_B(df):
   return df
 
 # Cell
-def compute_rotations(df):
+def compute_rotations(df, konstant_inklino = 20000):
 
-  konstant_inklino = 20000.
+  # some inclinometers have a different device constant.
+  # 20'000 is the constant of our device.
+  #konstant_inklino = 20000.
 
   df[('A','rotation')] = df[('A', 'average')] / konstant_inklino
   df[('B','rotation')] = df[('B', 'average')] / konstant_inklino
@@ -300,7 +303,7 @@ def build_fig_defo(df, lettre='A'):
   #                                       {'title': 'Slider switched to date: 0'}]}
 
   sliders = [dict(
-      active=10,
+      active=0,
       currentvalue={"prefix": "Step: "},
       pad={"t": 50}, # Espace slider graph
       steps=steps

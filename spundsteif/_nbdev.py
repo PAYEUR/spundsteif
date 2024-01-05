@@ -2,31 +2,7 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"__construct_INFO__": "01_sensors.ipynb",
-         "__construct_list_DATA__": "01_sensors.ipynb",
-         "read_files": "01_sensors.ipynb",
-         "__dates_sorted__": "01_sensors.ipynb",
-         "__ind_chrono_order__": "01_sensors.ipynb",
-         "sort_chrono": "01_sensors.ipynb",
-         "__elements_vides__": "01_sensors.ipynb",
-         "traitement_elements_vides": "01_sensors.ipynb",
-         "__condition_DATA__": "01_sensors.ipynb",
-         "list_names_channels": "01_sensors.ipynb",
-         "extract_T0": "01_sensors.ipynb",
-         "construction_list_df_messung": "01_sensors.ipynb",
-         "concat_df_messung": "01_sensors.ipynb",
-         "traitement_colonnes_zeit": "01_sensors.ipynb",
-         "__clean_name__": "01_sensors.ipynb",
-         "traitement_colonnes_names": "01_sensors.ipynb",
-         "patch_buggs_in_column_names": "01_sensors.ipynb",
-         "conversion_float": "01_sensors.ipynb",
-         "change_overhead_values": "01_sensors.ipynb",
-         "downsample": "01_sensors.ipynb",
-         "get_automatic_data": "01_sensors.ipynb",
-         "define_index": "01_sensors.ipynb",
-         "get_manual_data": "03_pressures.ipynb",
-         "get_data": "01_sensors.ipynb",
-         "construct_df_csv": "03_pressures.ipynb",
+index = {"construct_df_csv": "02_inclinometers.ipynb",
          "drop_columns": "02_inclinometers.ipynb",
          "update_type_date": "02_inclinometers.ipynb",
          "rename_columns": "02_inclinometers.ipynb",
@@ -40,21 +16,13 @@ index = {"__construct_INFO__": "01_sensors.ipynb",
          "column_deformee_relative": "02_inclinometers.ipynb",
          "run_computation_inklino": "02_inclinometers.ipynb",
          "extract_df_datetube": "02_inclinometers.ipynb",
-         "build_fig_defo": "02_inclinometers.ipynb",
-         "clean": "03_pressures.ipynb",
-         "merge_piezo_excavation": "03_pressures.ipynb",
-         "clean_manual_df": "03_pressures.ipynb",
-         "merge_manual_automatic": "03_pressures.ipynb",
-         "resample_data": "03_pressures.ipynb",
-         "get_pressures": "03_pressures.ipynb",
-         "relative_defo": "04_deformations.ipynb",
-         "patch_sensors": "04_deformations.ipynb",
-         "get_deformations": "04_deformations.ipynb"}
+         "build_fig_defo": "02_inclinometers.ipynb"}
 
-modules = ["sensors.py",
-           "inclinometers.py",
-           "pressures.py",
-           "deformations.py"]
+modules = ["inclinometers.py",
+           "catman.py",
+           "plaxis_linear.py",
+           "plaxis.py",
+           "None.py"]
 
 doc_url = "https://PAYEUR.github.io/spundsteif/"
 

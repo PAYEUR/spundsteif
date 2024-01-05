@@ -1,0 +1,46 @@
+name_sensor;depth;x;y;type_sensor;units;face;type_bohlen
+EV11;2;0.45;0.15;DMS;µm/m;;paar einzelbohlen
+EV12;2;0.15;0.15;DMS;µm/m;;paar einzelbohlen
+EV13;2;0;-0.022;DMS;µm/m;;paar einzelbohlen
+EV21;4.5;0.45;0.15;DMS;µm/m;;paar einzelbohlen
+EV22;4.5;0.15;0.15;DMS;µm/m;;paar einzelbohlen
+EV23;4.5;0;-0.022;DMS;µm/m;;paar einzelbohlen
+EV31;7.5;0.45;0.15;DMS;µm/m;;paar einzelbohlen
+EV32;7.5;0.15;0.15;DMS;µm/m;;paar einzelbohlen
+EV33;7.5;0;-0.022;DMS;µm/m;;paar einzelbohlen
+EH11;2;-0.45;-0.15;DMS;µm/m;;paar einzelbohlen
+EH12;2;-0.15;-0.15;DMS;µm/m;;paar einzelbohlen
+EH13;2;0;0.022;DMS;µm/m;;paar einzelbohlen
+EH21;4.5;-0.45;-0.15;DMS;µm/m;;paar einzelbohlen
+EH22;4.5;-0.15;-0.15;DMS;µm/m;;paar einzelbohlen
+EH23;4.5;0;0.022;DMS;µm/m;;paar einzelbohlen
+EH31;7.5;-0.45;-0.15;DMS;µm/m;;paar einzelbohlen
+EH32;7.5;-0.15;-0.15;DMS;µm/m;;paar einzelbohlen
+EH33;7.5;0;0.022;DMS;µm/m;;paar einzelbohlen
+W11;2;-0.45;-0.15;DMS;µm/m;;vorveklebte
+W12;2;-0.15;-0.15;DMS;µm/m;;vorveklebte
+W13;2;0;0.022;DMS;µm/m;;vorveklebte
+W21;4.5;-0.45;-0.15;DMS;µm/m;;vorveklebte
+W22;4.5;-0.15;-0.15;DMS;µm/m;;vorveklebte
+W23;4.5;0;0.022;DMS;µm/m;;vorveklebte
+W31;7.5;-0.45;-0.15;DMS;µm/m;;vorveklebte
+W32;7.5;-0.15;-0.15;DMS;µm/m;;vorveklebte
+W33;7.5;0;0.022;DMS;µm/m;;vorveklebte
+VH11;2;0.45;0.15;DMS;µm/m;;vorveklebte
+VH12;2;0.15;0.15;DMS;µm/m;;vorveklebte
+VH13;2;0;-0.022;DMS;µm/m;;vorveklebte
+VH21;4.5;0.45;0.15;DMS;µm/m;;vorveklebte
+VH22;4.5;0.15;0.15;DMS;µm/m;;vorveklebte
+VH23;4.5;0;-0.022;DMS;µm/m;;vorveklebte
+VH31;7.5;0.45;0.15;DMS;µm/m;;vorveklebte
+VH32;7.5;0.15;0.15;DMS;µm/m;;vorveklebte
+VH33;7.5;0;-0.022;DMS;µm/m;;vorveklebte
+EDS_A;1;-0.3;-0.15;EDS;Pa;passive;paar einzelbohlen
+EDS_B;3;-0.3;-0.15;EDS;Pa;passive;paar einzelbohlen
+EDS_C;5;-0.3;-0.15;EDS;Pa;passive;paar einzelbohlen
+EDS_D;7;-0.3;-0.15;EDS;Pa;passive;paar einzelbohlen
+EDS_E;4.5;0.3;0.15;EDS;Pa;aktive;paar einzelbohlen
+EDS_F;6;0.3;0.15;EDS;Pa;aktive;paar einzelbohlen
+EDS_G;7.5;0.3;0.15;EDS;Pa;aktive;paar einzelbohlen
+Temp_a;4.5;-0.3;-0.15;Temperature;°C;passive;paar einzelbohlen
+Temp_b;2;0.3;0.15;Temperature;°C;aktive;paar einzelbohlen
